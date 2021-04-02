@@ -42,8 +42,8 @@ def dice_coef_weight(y_true, y_pred):
     y_true_f = (Lambda(lambda y_true: y_true[:, :, 0:])(y_true))
     y_pred_f = (Lambda(lambda y_pred: y_pred[:, :, 0:])(y_pred))
 
-    print y_true_f.shape
-    print y_pred_f.shape
+    print(y_true_f.shape)
+    print(y_pred_f.shape)
 
     product = multiply([y_true_f, y_pred_f])
 

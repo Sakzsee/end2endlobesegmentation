@@ -29,13 +29,13 @@ def get_UID(file_name):
             
             return data
         except Exception as inst:
-            print type(inst)     # the exception instance
+            print(type(inst))    # the exception instance
       
-            print inst           # __str__ allows args to be printed directly
+            print(inst)         # __str__ allows args to be printed directly
 
             print('no pickle here')
             return [],[],[]
-    print 'nop'
+    print('nop')
     return[],[],[]
    
 #%%    
@@ -54,7 +54,7 @@ def load_itk(filename,original=False,get_orientation=False):
         itkimage = sitk.ReadImage(filename)
         
     else:
-        print 'nonfound:',filename
+        print('nonfound:',filename)
         return [],[],[]
 
     # Convert the image to a  numpy array first ands then shuffle the dimensions to get axis in the order z,y,x
